@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: oracle-ads
-  version: "2.16.0"
+  version: 2.16.1
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/oracle_ads-${{ version }}.tar.gz
-  sha256: 8ef472154ea21b9e54f14ed604cc5a5ea59c285bfab472c1045fcd7a1d5ed562
+  sha256: 3bd51e4eb13ce5ddfe517c3e8663fad118a0a767a0a9f6981f6e4571881a1e34
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -35,13 +35,12 @@ requirements:
     - asteval >=0.9.25
     - cerberus >=1.3.4
     - cloudpickle >=1.6.0
-    - fire
     - fsspec >=0.8.7
     - gitpython >=3.1.2
     - jinja2 >=2.11.2
     - matplotlib-base >=3.1.3
     - numpy >=1.19.2
-    - oci >=2.148.0
+    - oci >=2.187.0
     - ocifs >=1.1.3
     - pandas >=2.2.0,<3.0.0
     - psutil >=5.7.2
@@ -50,8 +49,6 @@ requirements:
     - scikit-learn >=1.0
     - tabulate >=0.8.9
     - tqdm >=4.59.0
-    - rich
-
 tests:
   - python:
       imports:
